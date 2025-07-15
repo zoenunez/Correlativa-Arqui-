@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.nivel {
+  margin-bottom: 30px;
+  border: 2px solid #aaa;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subject {
+  background-color: pink;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #ccc;
+}
+
+.subject.approved {
+  background-color: purple;
+  color: white;
+  text-decoration: line-through;
+}
+
+.subject.locked {
+  background-color: #ccc;
+  color: #666;
+  pointer-events: none;
+}
