@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva Arquitectura FAUD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Interactiva - Arquitectura FAUD</h1>
+
+  <!-- N1 -->
+  <div class="nivel" id="n1">
+    <h2>N1</h2>
+    <div class="subjects">
+      <div class="subject" data-id="arqui1">Arquitectura I</div>
+      <div class="subject" data-id="grafico">Sist. Gráfico de Expr.</div>
+      <div class="subject" data-id="tecno">Int. a la Tecnología</div>
+      <div class="subject" data-id="historia">Int. a la Historia</div>
+      <div class="subject" data-id="morf1">Morfología I</div>
+      <div class="subject" data-id="mat1">Matemáticas I</div>
+      <div class="subject" data-id="fisica">Física</div>
+    </div>
+  </div>
+
+  <!-- N2 -->
+  <div class="nivel" id="n2">
+    <h2>N2</h2>
+    <div class="subjects">
+      <div class="subject locked" data-id="arqui2" data-prereq='["arqui1","grafico","tecno"]'>Arquitectura II</div>
+      <div class="subject locked" data-id="const1" data-prereq='["grafico","tecno","mat1"]'>Construcciones I</div>
+      <div class="subject locked" data-id="inst1" data-prereq='["tecno","fisica","mat1"]'>Instalaciones I</div>
+      <div class="subject locked" data-id="estructura1" data-prereq='["tecno","fisica","mat1"]'>Estructura I</div>
+      <div class="subject locked" data-id="morf2" data-prereq='["morf1"]'>Morfología II</div>
+      <div class="subject locked" data-id="hist1" data-prereq='["historia"]'>Hist. de la Arq. I</div>
+      <div class="subject locked" data-id="teoria" data-prereq='["historia"]'>Teoría y Métodos</div>
+    </div>
+  </div>
+
+  <!-- N3 -->
+  <div class="nivel" id="n3">
+    <h2>N3</h2>
+    <div class="subjects">
+      <div class="subject locked" data-id="arqui3" data-prereq='["arqui2","const1"]'>Arquitectura III</div>
+      <div class="subject locked" data-id="const2" data-prereq='["const1"]'>Construcciones II</div>
+      <div class="subject locked" data-id="inst2" data-prereq='["inst1"]'>Instalaciones II</div>
+      <div class="subject locked" data-id="estructura2" data-prereq='["estructura1"]'>Estructura II</div>
+      <div class="subject locked" data-id="morf3" data-prereq='["morf2"]'>Morfología III</div>
+      <div class="subject locked" data-id="hist2" data-prereq='["hist1","teoria"]'>Hist. de la Arq. II</div>
+      <div class="subject" data-id="info">Informática</div>
+      <div class="subject" data-id="mat2">Matemáticas II</div>
+    </div>
+  </div>
+
+  <!-- N4 -->
+  <div class="nivel" id="n4">
+    <h2>N4</h2>
+    <div class="subjects">
+      <div class="subject locked" data-id="arqui4" data-prereq='["arqui3","const2"]'>Arquitectura IV</div>
+      <div class="subject locked" data-id="const3" data-prereq='["const2"]'>Construcciones III</div>
+      <div class="subject locked" data-id="inst3" data-prereq='["inst2"]'>Instalaciones III</div>
+      <div class="subject locked" data-id="estructura3" data-prereq='["estructura2"]'>Estructura III</div>
+      <div class="subject locked" data-id="hist3" data-prereq='["hist2"]'>Hist. de la Arq. III</div>
+      <div class="subject locked" data-id="urban1" data-prereq='["teoria"]'>Urbanismo I</div>
+      <div class="subject locked" data-id="paisaje" data-prereq='["teoria"]'>Arq. Paisajista</div>
+      <div class="subject" data-id="idioma">Idioma</div>
+    </div>
+  </div>
+
+  <!-- N5 -->
+  <div class="nivel" id="n5">
+    <h2>N5</h2>
+    <div class="subjects">
+      <div class="subject locked" data-id="arqui5" data-prereq='["arqui4","const3"]'>Arquitectura V</div>
+      <div class="subject locked" data-id="gestion" data-prereq='["arqui4"]'>Prod. y Gestión</div>
+      <div class="subject locked" data-id="equipamiento" data-prereq='["arqui4"]'>Equipamiento</div>
+      <div class="subject locked" data-id="estructura4" data-prereq='["estructura3"]'>Estructura IV</div>
+      <div class="subject locked" data-id="urban2" data-prereq='["urban1"]'>Urbanismo II</div>
+      <div class="subject" data-id="topografia">Topografía</div>
+      <div class="subject" data-id="electiva">Electiva</div>
+    </div>
+  </div>
+
+  <!-- N6 -->
+  <div class="nivel" id="n6">
+    <h2>N6</h2>
+    <div class="subjects">
+      <div class="subject locked" data-id="arqui6" data-prereq='["arqui5"]'>Arquitectura VI</div>
+      <div class="subject locked" data-id="ppa" data-prereq='["equipamiento","urban2","electiva"]'>PPA</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
